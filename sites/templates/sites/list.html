@@ -1,0 +1,17 @@
+{% load static %}
+{% if my_list %}
+{% for items in my_list %}
+<a class="trending-game-card__trending-game-card__1IA-4" href="{% url items.urls %}">
+    <div class="app-icon-container__trending-game-card__MndDC">
+        <img src="{% static '/aw/img/arcade-logo.png' %}" class="app-icon__trending-game-card__qf-6B">
+    </div>
+    <h1 class="name__trending-game-card__1Smxs clamp clamp-two-lines"style="white-space: pre-wrap;">{{ items.title }}</h1>
+    <p class="member-count__trending-game-card__22sfi">
+        <img class="count-icon__trending-game-card__1n3HQ" src="{% static '/aw/img/oi_member.png' %}" role="presentation">{{ items.count }}
+    </p>
+    <p class="post-count__trending-game-card__3lU9q">
+        <img class="count-icon__trending-game-card__1n3HQ" src="{% static '/aw/img/oi_post.png' %}" role="presentation">{{ items.used }} paid
+    </p>
+</a>
+{% endfor %}
+{% endif %}

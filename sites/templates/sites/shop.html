@@ -1,0 +1,112 @@
+{% extends "sites/index.html" %}
+{% block content %}
+
+<style>
+
+.stream-settings-view .setting-panel {
+    box-shadow: 0px 3px 14px 0 rgba(0,0,0,0.5);
+    margin-bottom: 12px;
+}
+.stream-settings-view .header {
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    background-color: #232533;
+    text-align: left;
+    text-indent: 20px;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Helvetica;
+}
+
+.stream-settings-view .content-area {
+    width: 100%;
+    background-color: #2d2f41;
+    overflow: hidden;
+}
+
+.stream-settings-view .setting-section {
+    position: relative;
+    border: solid 1px #737485;
+    border-radius: 4px;
+    margin: 0 8px 8px 0;
+}
+
+.settings-content {
+    width: 100%; 
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+</style>
+<script 
+src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+</script>
+<div class="content-wrapper post-container" >
+    <div class="post-user-info-bar" style="padding: 16px 10px 8px 16px;text-align: left;">
+        <span>
+            
+        </span>
+
+        <div class="user-text-content">
+            <a href="#">
+                <div class="user-name clickable" title="mr.robot">
+                    <div class="user-post-name">Mr. ROBOT
+
+                    </div>
+                </div>
+            </a>
+            <span>BOT · 24/H</span>
+        </div>
+        <div class="more-icon" title="Report this post">
+
+        </div>
+
+            
+    </div>
+    <div style="text-align: center;" class="post-title clamp clamp-three-lines" title="Buy Bots Now">Buy Bots Now
+    </div>
+
+    <div class="content-post">
+        <div class="rich-post-content">
+            <div class="rich-text block" style="text-align: center;">
+                <pre style="white-space: pre-wrap; overflow-wrap: break-word; line-height: 1.5; display: inline-block; width: 100%; font-family: Roboto; color: rgb(255, 255, 255); font-size: 16px;">
+                    All bots are working for 1 hour. So keep that in mind. Also if you make a mistake with your username then you must contact me to get support or your payment is lost.
+                </pre>
+            </div>
+        </div>
+    </div>
+
+
+    
+</div>
+<div class="stream-settings-container">
+<div class="settings-content">
+<div class="stream-settings-view">
+<div class="setting-panel">
+    <div class="header">Bots</div>
+    <div class="content-area">
+        <div class="content-wrap">
+            <div class="left-lane stream-settings"style="width:100%;float:none;">
+
+                <div class="setting-section desc-block">
+                    <div class="title">View 1 Hour / 15 Bots / 10 €</div>
+                    <form name="input" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="DNYW97HJ5XS6W">
+                    <input type="hidden" name="on0" value="username">
+                    <input placeholder="Add your Username" name="os0" value=""style="width:45%;">
+                    <input style="background-color: transparent;/*margin: 5px 0px 5px 0px;*/width: 120px;"type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" alt="PayPal - The safer, easier way to pay online!">
+                    </form>
+                    <!--textarea>Watch me play on Omlet Arcade! https://omlet.gg/iceman994</!--textarea-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock content %}
